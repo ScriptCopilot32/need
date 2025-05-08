@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.get('/proxy', async (req, res) => {
     const url = req.query.url;
+    console.log('Запрос:', url); // Для отладки
     if (!url) {
         return res.status(400).json({ error: 'URL is required' });
     }
@@ -17,6 +18,7 @@ app.get('/proxy', async (req, res) => {
         });
         res.json(response.data);
     } catch (error) {
+        console.error('Ошибка:', error.message, error.response?.status); // Для отладки
         res.status(error.response?.status || 500).json({
             error: error.message,
             status: error.response?.status
@@ -25,5 +27,5 @@ app.get('/proxy', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(Proxy server running on port ${port});
+    console.log(Proxy server running on port ${port}); // Исправлено
 });
