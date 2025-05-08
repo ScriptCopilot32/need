@@ -27,5 +27,5 @@ app.get('/proxy', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(Proxy server running on port ${port}); // Исправлено
+    console.log(Proxy server running on port ${port}); // Используем шаблонную строку
 });
