@@ -98,7 +98,7 @@ humanoid:TakeDamage(999999)
 EndDecisionRemote:FireServer(false)
 
 if queue_on_tp then
-    queue_on_tp('PUT YOUR SHIT HERE')
+    queue_on_tp(game:HttpGet('https://raw.githubusercontent.com/ScriptCopilot32/need/refs/heads/main/bonds.lua'))
 end
 
 print("=== Script finished ===")
