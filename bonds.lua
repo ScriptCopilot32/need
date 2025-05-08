@@ -85,7 +85,7 @@ for idx, entry in ipairs(bondData) do
     end
 
     ActivatePromise:InvokeServer(entry.item)
-    task.wait(0.1) --When it warns "Not collecting", increase this to give more time
+    task.wait(0.5) --When it warns "Not collecting", increase this to give more time
 
     if not entry.item.Parent then
         print("Bond collected")
